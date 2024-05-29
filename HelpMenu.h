@@ -15,8 +15,7 @@ public:
 private:
     QHBoxLayout* makePairWidgets(QWidget* pLeftWidget, QWidget* pRightWidget) const;
 
-    QLabel* makeInfoLabel(const QVariant& crVar);
-    QLabel* makeDescriptionLbl(const QString& crQstrTxt) const;
+
     QHBoxLayout *makeDescription(const QVariant& crVar, const QString& crQstrTxt);
     void AdjustHelpMenu();
 };

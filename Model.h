@@ -16,8 +16,8 @@ public:
     explicit Model(QObject* pParent = nullptr);
     QVariant headerData(int section, Qt::Orientation orientation, int role) const;
 
-    int rowCount(const QModelIndex& = QModelIndex()) const;
     int columnCount(const QModelIndex& = QModelIndex()) const;
+    int rowCount(const QModelIndex& = QModelIndex()) const;
     QVariant data(const QModelIndex& crIndex, int iRole) const;
     bool setData(const QModelIndex& index, const QVariant& rValue, int iRole);
     bool removeRow(int iRow, const QModelIndex& = QModelIndex());

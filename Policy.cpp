@@ -7,18 +7,18 @@
 
 std::map<Keys, std::string> mapPolicy =
 {
-    {Keys::key_Id, QString::fromLocal8Bit("Номер полиса").toStdString()},
-    {Keys::key_fullName, QString::fromLocal8Bit("Имя пользователя").toStdString()},
-    {Keys::key_telNumber, QString::fromLocal8Bit("Номер телефона").toStdString()},
-    {Keys::key_typeOfHouse, QString::fromLocal8Bit("Тип жилища").toStdString()},
-    {Keys::key_address, QString::fromLocal8Bit("Адрес").toStdString()},
-    {Keys::key_typeOfProperty, QString::fromLocal8Bit("Материал").toStdString()},
-    {Keys::key_yearOfConstruction, QString::fromLocal8Bit("Год постройки").toStdString()},
-    {Keys::key_housingArea, QString::fromLocal8Bit("Площадь дома").toStdString()},
-    {Keys::key_insuranceProgram, QString::fromLocal8Bit("Программа").toStdString()},
-    {Keys::key_insuranceAmount, QString::fromLocal8Bit("Сумма страхования").toStdString()},
-    {Keys::key_insurancePremium, QString::fromLocal8Bit("Страховая премия").toStdString()},
-    {Keys::key_insurancePeriod, QString::fromLocal8Bit("Срок страхования").toStdString()}
+    {Keys::key_Id, QString::fromLocal8Bit("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ").toStdString()},
+    {Keys::key_fullName, QString::fromLocal8Bit("пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ").toStdString()},
+    {Keys::key_telNumber, QString::fromLocal8Bit("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ").toStdString()},
+    {Keys::key_typeOfHouse, QString::fromLocal8Bit("пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ").toStdString()},
+    {Keys::key_address, QString::fromLocal8Bit("пїЅпїЅпїЅпїЅпїЅ").toStdString()},
+    {Keys::key_typeOfProperty, QString::fromLocal8Bit("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ").toStdString()},
+    {Keys::key_yearOfConstruction, QString::fromLocal8Bit("пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ").toStdString()},
+    {Keys::key_housingArea, QString::fromLocal8Bit("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ").toStdString()},
+    {Keys::key_insuranceProgram, QString::fromLocal8Bit("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ").toStdString()},
+    {Keys::key_insuranceAmount, QString::fromLocal8Bit("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ").toStdString()},
+    {Keys::key_insurancePremium, QString::fromLocal8Bit("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ").toStdString()},
+    {Keys::key_insurancePeriod, QString::fromLocal8Bit("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ").toStdString()}
 };
 
 Policy::Policy()
@@ -51,10 +51,7 @@ void Policy::setData(const std::vector<std::string>& vData)
     }
 }
 
-std::string Policy::getHeaderFromKey(Keys key) const
-{
-    return mapPolicy[key];
-}
+
 
 std::string Policy::getDataFromKey(Keys key) const
 {
@@ -77,6 +74,11 @@ std::string Policy::getDataFromKey(Keys key) const
 std::map<Keys, std::string> Policy::getTypes()
 {
     return mapPolicy;
+}
+
+std::string Policy::getHeaderFromKey(Keys key) const
+{
+    return mapPolicy[key];
 }
 
 std::vector<std::string> Policy::getRowData() const
